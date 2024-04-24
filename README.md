@@ -1,13 +1,13 @@
 # Debug Library
-
+___
 This Lua library provides easy-to-use functionalities for logging and managing debug messages. It supports different log levels such as LOG, WARNING, and ERROR, and can be used to enhance debugging processes in Lua projects.
-
+___
 ### Features
 > Custom Debug Instances: Create separate debug instances with unique names.
 > Multiple Log Levels: Support for different log levels including LOG, WARNING, and ERROR.
 > Log Management: Store and retrieve log messages for each instance.
 > Flexible Logging: Accepts variable number of arguments for logging.
-
+___
 ### Installation
 To use this debug library in your Lua project, follow these simple steps:
 
@@ -21,10 +21,10 @@ git clone https://github.com/yourusername/lua-debug-library.git
 ```
 local debug = require("path/to/debug")
 ```
-
+___
 ### Usage
 Below are examples of how to use the debug library:
-
+___
 ### Creating a Debug Instance
 
 ```lua
@@ -55,7 +55,7 @@ end
 ```lua
 debugger:debug("Enter your name", "John Doe")
 ```
-
+___
 ### Contributing
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
@@ -64,6 +64,6 @@ Contributions are what make the open-source community such an amazing place to l
 3. Commit your Changes (git commit -m 'Add some AmazingFeature')
 4. Push to the Branch (git push origin feature/AmazingFeature)
 5. Open a Pull Request
-   
+___
 ### License
 Distributed under the MIT License. See `LICENSE` for more information.
