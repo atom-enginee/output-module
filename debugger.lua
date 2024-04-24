@@ -1,6 +1,5 @@
 --————————————————————————————————————————————————————————————————————--
 
--- Debug library: Provides functionalities for logging and managing debug messages.
 local debug = {}
 
 --————————————————————————————————————————————————————————————————————--
@@ -39,6 +38,7 @@ function debug:warning(...)
 end
 
 --————————————————————————————————————————————————————————————————————--
+
 -- Logs a message to the console with a log level of "ERROR".
 -- @param ... Variable number of arguments to be logged.
 function debug:error(...)
@@ -56,6 +56,7 @@ function debug:getLogs()
 end
 
 --————————————————————————————————————————————————————————————————————--
+
 -- A generic debug function that simply prints a prompt and a user input.
 -- @param prompt The prompt message to display before the input.
 -- @param user_input The user input to display and return.
