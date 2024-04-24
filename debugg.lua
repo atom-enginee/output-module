@@ -8,14 +8,14 @@ local debug = {}
 -- @param name The name of the debug instance.
 -- @return A new debug object with specified name.
 function debug.new(name)
-    local instance = {
-        name = name,  -- Name of the debug instance.
-        logs = {},    -- Table to store log messages.
-    }
+	local instance = {
+		name = name,  -- Name of the debug instance.
+		logs = {},    -- Table to store log messages.
+	}
 
-    setmetatable(instance, debug)
-    debug.__index = debug
-    return instance
+	setmetatable(instance, debug)
+	debug.__index = debug
+	return instance
 end
 
 --————————————————————————————————————————————————————————————————————--
@@ -23,18 +23,19 @@ end
 -- Logs a message to the console with a log level of "LOG".
 -- @param ... Variable number of arguments to be logged.
 function debug:log(...)
-    local message = table.concat({...}, " ")
-    table.insert(self.logs, message)
-    print("[LOG] (" .. self.name .. "):(" .. script.Name .. "):", message)
+	local message = table.concat({...}, " ")
+	table.insert(self.logs, message)
+	print("[LOG] (" .. self.name .. "):(" .. script.Name .. "):", message)
 end
 
 --————————————————————————————————————————————————————————————————————--
+
 -- Logs a message to the console with a log level of "WARNING".
 -- @param ... Variable number of arguments to be logged.
 function debug:warning(...)
-    local message = table.concat({...}, " ")
-    table.insert(self.logs, message)
-    print("[WARNING] (" .. self.name .. "):(" .. script.Name .. "):", message)
+	local message = table.concat({...}, " ")
+	table.insert(self.logs, message)
+	print("[WARNING] (" .. self.name .. "):(" .. script.Name .. "):", message)
 end
 
 --————————————————————————————————————————————————————————————————————--
@@ -42,9 +43,9 @@ end
 -- Logs a message to the console with a log level of "ERROR".
 -- @param ... Variable number of arguments to be logged.
 function debug:error(...)
-    local message = table.concat({...}, " ")
-    table.insert(self.logs, message)
-    print("[ERROR] (" .. self.name .. "):(" .. script.Name .. "):", message)
+	local message = table.concat({...}, " ")
+	table.insert(self.logs, message)
+	print("[ERROR] (" .. self.name .. "):(" .. script.Name .. "):", message)
 end
 
 --————————————————————————————————————————————————————————————————————--
@@ -52,7 +53,7 @@ end
 -- Retrieves all logged messages.
 -- @return Table of logged messages.
 function debug:getLogs()
-    return self.logs
+	return self.logs
 end
 
 --————————————————————————————————————————————————————————————————————--
@@ -62,8 +63,8 @@ end
 -- @param user_input The user input to display and return.
 -- @return The user input.
 function debug:debug(prompt, user_input)
-    print(prompt .. ": " .. user_input)
-    return user_input
+	print(prompt .. ": " .. user_input)
+	return user_input
 end
 
 --————————————————————————————————————————————————————————————————————--
