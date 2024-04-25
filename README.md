@@ -14,7 +14,7 @@ To use this debug library in your Lua project, follow these simple steps:
 1. Clone the Repository: Clone this repository to your local machine or download the `debug.lua` file directly.
 
 ```
-git clone https://github.com/yourusername/lua-debug-library.git
+git clone https://github.com/atom-enginee/output-module.git
 ```
 2. Include the Library: Include the `debug.lua` file in your Lua script.
 
