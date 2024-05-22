@@ -1,5 +1,3 @@
---————————————————————————————————————————————————————————————————————--
-
 local debug = {}
 
 --————————————————————————————————————————————————————————————————————--
@@ -25,7 +23,14 @@ end
 function debug:log(...)
 	local message = table.concat({...}, " ")
 	table.insert(self.logs, message)
-	print("[LOG] (" .. self.name .. "):(" .. script.Name .. "):", message)
+	local prefix = "[LOG] " .. self.name .. ":"
+	local subfix = ""
+	if game:GetService("RunService"):IsClient() then
+		subfix = "[Client]:"
+	elseif game:GetService("RunService"):IsServer() then
+		subfix = "[Server]:"
+	end
+	print(subfix, prefix, message)
 end
 
 --————————————————————————————————————————————————————————————————————--
@@ -35,7 +40,14 @@ end
 function debug:warning(...)
 	local message = table.concat({...}, " ")
 	table.insert(self.logs, message)
-	print("[WARNING] (" .. self.name .. "):(" .. script.Name .. "):", message)
+	local prefix = "[WARNING] " .. self.name .. ":"
+	local subfix = ""
+	if game:GetService("RunService"):IsClient() then
+		subfix = "[Client]:"
+	elseif game:GetService("RunService"):IsServer() then
+		subfix = "[Server]:"
+	end
+	print(subfix ,prefix, message)
 end
 
 --————————————————————————————————————————————————————————————————————--
@@ -45,7 +57,14 @@ end
 function debug:error(...)
 	local message = table.concat({...}, " ")
 	table.insert(self.logs, message)
-	print("[ERROR] (" .. self.name .. "):(" .. script.Name .. "):", message)
+	local prefix = "[ERROR] " .. self.name .. ":"
+	local subfix = ""
+	if game:GetService("RunService"):IsClient() then
+		subfix = "[Client]:"
+	elseif game:GetService("RunService"):IsServer() then
+		subfix = "[Server]:"
+	end
+	print(subfix, prefix, message)
 end
 
 --————————————————————————————————————————————————————————————————————--
@@ -66,7 +85,5 @@ function debug:debug(prompt, user_input)
 	print(prompt .. ": " .. user_input)
 	return user_input
 end
-
---————————————————————————————————————————————————————————————————————--
 
 return debug
